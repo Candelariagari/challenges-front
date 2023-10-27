@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntuate</title>
+</head>
+<body>
+    <div class="calificate">
+        <span class="circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.9844 10.7232L17.7563 14.4132L19.0228 19.9069C19.0898 20.1941 19.0707 20.4947 18.9678 20.7711C18.865 21.0475 18.6829 21.2874 18.4444 21.4609C18.2059 21.6344 17.9215 21.7337 17.6269 21.7464C17.3323 21.7592 17.0404 21.6848 16.7878 21.5326L11.9963 18.6263L7.21501 21.5326C6.96242 21.6848 6.67056 21.7592 6.37592 21.7464C6.08128 21.7337 5.79694 21.6344 5.55844 21.4609C5.31994 21.2874 5.13787 21.0475 5.03499 20.7711C4.93211 20.4947 4.91299 20.1941 4.98001 19.9069L6.2447 14.4188L2.01563 10.7232C1.79195 10.5303 1.63021 10.2756 1.55069 9.99113C1.47116 9.70666 1.4774 9.40504 1.56861 9.1241C1.65982 8.84315 1.83195 8.59539 2.06341 8.41188C2.29487 8.22838 2.57535 8.11729 2.8697 8.09256L8.44407 7.60974L10.62 2.41974C10.7336 2.14742 10.9253 1.9148 11.1709 1.75117C11.4164 1.58755 11.7049 1.50024 12 1.50024C12.2951 1.50024 12.5836 1.58755 12.8291 1.75117C13.0747 1.9148 13.2664 2.14742 13.38 2.41974L15.5625 7.60974L21.135 8.09256C21.4293 8.11729 21.7098 8.22838 21.9413 8.41188C22.1728 8.59539 22.3449 8.84315 22.4361 9.1241C22.5273 9.40504 22.5335 9.70666 22.454 9.99113C22.3745 10.2756 22.2127 10.5303 21.9891 10.7232H21.9844Z" fill="#FE7612"/>
+            </svg>    
+        </span>
+
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+        <div class="centered">
+            <div class="puntuation">
+                <button class="circle" value="1">1</button>
+                <button class="circle" value="2">2</button>
+                <button class="circle" value="3">3</button>
+                <button class="circle" value="4">4</button>
+                <button class="circle" value="5">5</button>
+            </div>
+            <div class="buttoncontainer">
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    :root{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        background-color: #141519;
+        display: flex;
+        min-height: max-content;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    .calificate{
+        background-color: #202731;
+        width: 380px;
+        padding: 15px;
+        border-radius: 25px;
+    }
+    h2{
+        color: #FCFCFC;
+    }
+    p{
+        color: #ABAEB7;
+        font-weight: 100;
+    }
+    .circle{
+        height: 50px;
+        width: 50px;
+        background: #262F38;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center; 
+        align-items: center;
+        color: #ABAEB7; 
+        border: none;
+    }
+    .centered{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .puntuation{
+        display: flex;
+        gap: 20px;
+    }
+    #submit{
+        color: white;
+        background-color: #FC7613;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        width: 90%;
+        font-size: medium;
+    }
+    .buttoncontainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .puntuation button:hover{
+        background-color: #7B8899;
+        color: aliceblue;
+        cursor: pointer;
+    }
+    #submit:hover{
+        background-color: aliceblue;
+        color: #FC7613;
+        cursor: pointer;
+    }
+    .selected{
+        background-color: #FC7613;
+        color: aliceblue;
+    }
+    @media (max-width: 430px) 
+    {
+        .calificate{
+            width: 314px;
+        }
+    }
+</style>
+
+<script>
+    window.onload = (event) => {
+        localStorage.clear();
+    }
+
+    document.querySelectorAll('.circle').forEach(puntuation => puntuation.addEventListener('click', function(){
+        var old_value = document.querySelector('.selected');
+        if(old_value != null){
+            old_value.classList.remove('selected');
+        }
+        localStorage.setItem("puntuation", this.value);
+        this.classList.add('selected');
+    }));
+
+    document.getElementById('submit').addEventListener('click', function(){
+        localStorage.getItem("puntuation") == null ? alert("Please select a puntuation value!") : location.href="./thank_you_card.html";
+    });
+</script>
