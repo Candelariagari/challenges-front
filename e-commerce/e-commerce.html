@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+</head>
+<body>
+    
+    <div class="products">
+        <h1>Find what you need</h1>
+        <div class="product">
+            <img src="./img/green_t-shirt.png" alt="green t-shirt">
+            <h3>Polo Ralph Lauren</h3>
+            <p class="description">Impeccably tailored in italy from lightweight navy wool.</p>
+            <p>$300</p>
+        </div>
+
+        <div class="product">
+            <img src="./img/laptop.png" alt="laptop cover">
+            <h3>Tom Ford</h3>
+            <p class="description">Immaculate tailoring is TOM FORD's fort.</p>
+            <p>$879</p>
+        </div>
+        <div class="product">
+            <img src="./img/grey_t-shirt.png" alt="grey t-shirt">
+            <h3>Wooyoungmi</h3>
+            <p class="description">Dark grey slub wool, pintucked notch lapels.</p>
+            <p>$555</p>
+        </div>
+
+        <div class="product">
+            <img src="./img/long_shirt.png" alt="shirt">
+            <h3>Thom Sweeney</h3>
+            <p class="description">It's made from lightweight grey wool woven.</p>
+            <p>$680</p>
+        </div>
+
+        <div class="product">
+            <img src="./img/short.png" alt="short">
+            <h3>Kingsman</h3>
+            <p class="description">Crafted from khaki cotton and fully canvased.</p>
+            <p>$725</p>
+        </div>  
+
+        <div class="product">
+            <img src="./img/pant.png" alt="pant">
+            <h3>Boglioli</h3>
+            <p class="description">Masterdfully crafted in Nothern Italy.</p>
+            <p>$699</p>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    h1{
+        grid-column: 1/-1;
+    }
+    body{
+        font-family: sans-serif;
+    }
+   .products{
+        margin: auto;
+        width: 75%;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, 280px);
+        justify-content: center;
+   }
+   .products p{
+    font-weight: lighter;
+    color: lightslategray;
+   }
+   .product h3, img, .description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   }
+   .product{
+        display: grid;
+        grid-template-rows: 300px;  
+   }
+   .product:hover{
+       scale: 1.1;
+       cursor: pointer;
+   }
+   img{
+    max-width: 200px;
+    max-height: 300px;
+    margin: auto;
+   }
+</style>
