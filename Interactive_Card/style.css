@@ -1,0 +1,102 @@
+:root{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: #141519;
+    display: flex;
+    min-height: max-content;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    background-color: #202731;
+    width: 380px;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.appreciation{
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    color: #FCFCFC;
+}
+p{
+    color: #ABAEB7;
+    font-weight: lighter;
+}
+.circle{
+    height: 50px;
+    width: 50px;
+    background: #262F38;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    color: #ABAEB7; 
+    border: none;
+}
+.centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.puntuation{
+    display: flex;
+    gap: 20px;
+}
+#submit{
+    color: white;
+    background-color: #FC7613;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 90%;
+    font-size: medium;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.puntuation button:hover{
+    background-color: #7B8899;
+    color: aliceblue;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: aliceblue;
+    color: #FC7613;
+    cursor: pointer;
+}
+.selected{
+    background-color: #FC7613;
+    color: aliceblue;
+}
+.appreciation > p{
+    width: 90%;
+    text-align: center;
+}
+#result{
+    width: fit-content;
+    border: none;
+    background-color: #262F38;
+    color: #FC7613;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    font-weight: 100;
+}
+@media (max-width: 430px) 
+{
+    .calificate{
+        width: 314px;
+    }
+}
