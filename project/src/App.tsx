@@ -9,15 +9,13 @@ import MainLayout from "./components/MainLayout"
 
 function App() {
   return (
-    <>
-      <MainLayout>
-        <CompanyIntroduction />
-        <Services />
-        <PromotionCards /> 
-        <Customers />
-        <ArticlesPage />
-      </MainLayout>
-    </> 
+    <MainLayout>
+      <CompanyIntroduction />
+      <Services />
+      <PromotionCards /> 
+      <Customers />
+      <ArticlesPage />
+    </MainLayout>
   );
 }
 
