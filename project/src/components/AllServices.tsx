@@ -34,7 +34,7 @@ const AllServices = () => {
            
             <div className="w-3/5 grid gap-8 relative md:grid-cols-3 md:w-2/3">
                 {services.map(service => (
-                    <ServiceCard key={service.title} image={service.image} title={service.title} body={service.body}/>
+                    <ServiceCard service={service} />
                 ))}
             </div>
         </div>

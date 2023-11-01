@@ -20,7 +20,7 @@ const ArticlesPage = () => {
                 <div className="grid gap-6 py-6 md:grid-cols-3 md:relative">
                     <img src={element} className="hidden absolute md:inline	-left-12 -top-8" />
                     {articles.map(article => (
-                        <ArticlesCard image={article.image} header={article.header} body={article.body}/>
+                        <ArticlesCard props={article} />
                     ))}
                 </div>
                 <img src={element} className="absolute scale-75 right-0 bottom-0 md:hidden" />

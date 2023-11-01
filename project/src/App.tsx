@@ -2,20 +2,21 @@
 
 import ArticlesPage from "./components/ArticlesPage"
 import Customers from "./components/Customers"
-import SecondPage from "./components/SecondPage"
-import StartPage from "./components/StartPage"
-import ThirdPage from "./components/ThirdPage"
-import Footer from "./components/Footer";
+import Services from "./components/Services"
+import CompanyIntroduction from "./components/CompanyIntroduction"
+import PromotionCards from "./components/PromotionCards"
+import MainLayout from "./components/MainLayout"
 
 function App() {
   return (
     <>
-      <StartPage />
-      <SecondPage />
-      <ThirdPage /> 
-      <Customers />
-      <ArticlesPage />
-      <Footer /> 
+      <MainLayout>
+        <CompanyIntroduction />
+        <Services />
+        <PromotionCards /> 
+        <Customers />
+        <ArticlesPage />
+      </MainLayout>
     </> 
   );
 }
