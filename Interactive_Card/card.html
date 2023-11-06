@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Puntuate</title>
+</head>
+<body>
+    <div class="container">
+        <span class="circle">
+            <img src="./img/Vector.png" />
+        </span>
+
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+        <div class="centered">
+            <div class="puntuation">
+                <button class="circle" value="1">1</button>
+                <button class="circle" value="2">2</button>
+                <button class="circle" value="3">3</button>
+                <button class="circle" value="4">4</button>
+                <button class="circle" value="5">5</button>
+            </div>
+            <div class="btn-container">
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    window.onload = (event) => {
+        localStorage.clear();
+    }
+
+    document.querySelectorAll('.circle').forEach(puntuation => puntuation.addEventListener('click', function(){
+        var old_value = document.querySelector('.selected');
+        if(old_value != null){
+            old_value.classList.remove('selected');
+        }
+        localStorage.setItem("calification", this.value);
+        this.classList.add('selected');
+    }));
+
+    document.getElementById('submit').addEventListener('click', function(){
+        localStorage.getItem("calification") == null ? alert("Please select a puntuation value!") : location.href="./thank_you_card.html";
+    });
+</script>
