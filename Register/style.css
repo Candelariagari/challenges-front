@@ -1,0 +1,80 @@
+:root{
+    --gray: #808491;
+    --red: #EF4444;
+}
+body{
+    display: flex;
+    font-family: sans-serif;
+}
+#sign_up{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 70px;
+}
+h1{
+    margin-top: 100px;
+    font-family: 'Ubuntu';
+}
+a{
+    color: var(--red);
+    font-weight: 500;
+}
+p {
+    font-weight: 200;
+    color: var(--gray);
+}
+label{
+    padding-bottom: 10px;
+    display: inline-block;
+}
+input{
+    display:inline-block;
+    justify-content:flex-end;
+    border: none;
+    width: 92%;
+    height: 18px;
+}
+.input_container{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+input::placeholder{
+    font-weight:100;
+    font-size:small;
+    letter-spacing: 0.35px;
+    color: var(--gray);
+}
+#password, #confirm_password{
+    width: 100%;
+}
+.password_svg{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+hr{
+    border: 1px solid var(--gray);
+}
+.email hr{
+    border: 1px solid var(--red);
+}
+button{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--red);
+    color: aliceblue;
+    width: 90%;
+    padding: 12px;
+    font-size: large;
+    box-shadow: 0px 5px 10px 0px var(--gray);    
+}
+button:hover{
+    cursor: pointer;
+}
+.register{
+    display: flex;
+    justify-content: center;
+}
